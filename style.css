@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  /* Backgrounds */
+  --background: 15, 23, 42;
+  --background-secondary: 30, 41, 59;
+  --background-tertiary: 51, 65, 85;
+
+  /* Textos */
+  --text-primary: rgb(241, 245, 249);
+  --text-secondary: rgb(203, 213, 225);
+  --text-muted: rgb(148, 163, 184);
+
+  /* Cores principais */
+  --primary: rgb(59, 130, 246);
+  --primary-hover: rgb(37, 99, 235);
+
+  /* Cores secundárias */
+  --secondary: rgb(34, 197, 94);
+  --secondary-hover: rgb(22, 163, 74);
+
+  /* Destaques */
+  --accent: rgb(245, 158, 11);
+  --accent-hover: rgb(217, 119, 6);
+
+  /* Estados */
+  --danger: rgb(239, 68, 68);
+  --warning: rgb(234, 179, 8);
+  --success: rgb(16, 185, 129);
+  --info: rgb(14, 165, 233);
+
+  /* Bordas */
+  --border: rgb(51, 65, 85);
+  --border-light: rgb(71, 85, 105);
+
+  /* Sombras */
+  --shadow: rgba(0, 0, 0, 0.3);
+
+  /* Inputs */
+  --input-background: rgb(30, 41, 59);
+  --input-border: rgb(51, 65, 85);
+  --input-focus: rgb(59, 130, 246);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(var(--background));
+    padding-top: 90px;
+}
+
+button:hover, a:hover{
+    color: rgba(196, 196, 196, 0.9) !important;
+    transition: color 0.2s ease;
+}
+
+button:active, a:active{
+    color: rgba(128, 128, 128, 0.6) !important;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(90deg) scale(0.8);
+        opacity: 0;
+    } 
+
+    to{
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.animar_icone{
+    animation: girar 0.3s ease;
+}
+
+.visivel{
+    display: flex !important;
+}
+
+.navbar{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+}
+
+.navbar_container{
+    display: flex;
+    background: rgb(var(--background-secondary));
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+.navbar_bloco{
+    color: var(--text-primary);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Montserrat', monospace;
+    font-size: 15px;
+    gap: 15px;
+}
+
+.logo img{
+    filter: invert(1);
+    width: 50px;
+}
+
+.navbar_opcoes button{
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--text-primary);
+}
+
+.aba_opcoes_navbar{
+    display: none;
+    justify-content: end;
+    padding: 10px;
+}
+
+.aba_opcoes_navbar ul{
+    background: rgba(var(--background-tertiary), 0.3);
+    backdrop-filter: blur(10px);
+    list-style: none;
+    padding: 10px;
+    width: 200px;
+}
+
+.aba_opcoes_navbar li{
+    padding: 5px 10px;
+}
+
+.aba_opcoes_navbar a{
+    display: flex;
+    color: var(--text-secondary);
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.container{
+    display: grid;
+    background: rgb(var(--background-secondary));
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px 30px;
+}
+
+.bloco{
+    background: rgb(var(--background-tertiary));
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.graficos{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
