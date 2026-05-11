@@ -168,3 +168,9 @@ button:active, a:active{
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
+@media (max-width: 768px){
+    .graficos{
+        grid-template-columns: auto;
+    }
+}
